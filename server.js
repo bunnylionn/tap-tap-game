@@ -17,8 +17,8 @@ const WebSocket = require('ws');
 // An array representing the top scoring players: [{ name: String, score: Number, lastUpdated: Number }]
 let leaderboardData = [];
 
-// Port configuration
-const PORT = 8080;
+// Port configuration (using Render's dynamic PORT environment variable or defaulting to 8080)
+const PORT = process.env.PORT || 8080;
 
 // ==========================================
 // HTTP SERVER SETUP (Static Asset Delivery)
