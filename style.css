@@ -1040,4 +1040,51 @@ body {
         padding: 0.8rem;
         font-size: 0.95rem;
     }
+
+    /* Billboard Mobile Responsiveness */
+    .billboard-container {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+        padding: 0.6rem;
+        gap: 0.6rem;
+    }
+    
+    .billboard-grid {
+        height: auto;
+        overflow: visible;
+        gap: 0.6rem;
+    }
+    
+    .billboard-top-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
+    }
+    
+    .billboard-container .kiosk-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+        padding-bottom: 0.6rem;
+    }
+    
+    .billboard-container .kiosk-header .voucher-promo-badge {
+        margin-left: 0 !important;
+        text-align: left !important;
+        width: 100%;
+    }
+    
+    .qr-enrollment-card {
+        width: 100% !important; /* Override inline style width on mobile */
+    }
+    
+    .billboard-panel {
+        overflow: visible;
+        min-height: 300px;
+    }
+    
+    .billboard-leaderboard-list {
+        overflow: visible;
+    }
 }
