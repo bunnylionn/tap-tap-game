@@ -445,8 +445,8 @@ function endGameSession() {
     // Switch view to results card
     transitionToState('results');
 
-    // Automatic transition back to attract screen after 5 seconds
-    let resultsTimeLeft = 5;
+    // Automatic transition back to attract screen after 10 seconds
+    let resultsTimeLeft = 10;
     resultsSubmitBtn.innerText = `Skip & Return to Start (${resultsTimeLeft}s)`;
     
     if (resultsTimerInterval) {

@@ -990,3 +990,54 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 600px) {
+    .dashboard-grid {
+        gap: 0.8rem;
+    }
+    
+    .panel {
+        padding: 0.8rem;
+        gap: 0.8rem;
+    }
+    
+    .results-card {
+        padding: 1.5rem;
+        border-radius: 12px;
+        max-width: 92%;
+    }
+    
+    .results-card h2 {
+        font-size: 1.6rem;
+    }
+    
+    .results-runner-badge {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.4rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .stat-box {
+        padding: 0.6rem 0.3rem;
+        border-radius: 8px;
+    }
+    
+    .stat-box .val {
+        font-size: 1.4rem; /* Safe size for mobile displays */
+    }
+    
+    .stat-box .lbl {
+        font-size: 0.55rem;
+        line-height: 1.2;
+    }
+    
+    .results-actions button {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+}
