@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENUE LEADERBOARD // Neon Tap-Tap Live Display</title>
+    <!-- Modern Typography: Google Fonts Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="overflow: hidden;">
+    <!-- Venue Screen Flash Overlay (For Combo Event broadcasts) -->
+    <div id="screen-flash" class="screen-flash-overlay"></div>
+
+    <!-- MAIN APP CONTAINER -->
+    <main class="billboard-container">
+        
+        <!-- HEADER WITH LIVE METRIC STATUS -->
+        <header class="kiosk-header">
+            <div class="logo-area">
+                <span class="pulse-dot"></span>
+                <h1>NEON LEADERBOARD</h1>
+                <p class="subtitle">Venue Broadcast Hub</p>
+            </div>
+            <!-- Voucher Promo Reward Badge -->
+            <div class="voucher-promo-badge" style="background: linear-gradient(135deg, rgba(255, 0, 127, 0.15) 0%, rgba(112, 0, 255, 0.15) 100%); border: 1px solid var(--neon-pink); padding: 8px 16px; border-radius: 10px; box-shadow: 0 0 15px rgba(255, 0, 127, 0.2); text-align: right; margin-left: 20px;">
+                <span class="promo-label" style="display: block; font-size: 0.65rem; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">EXCLUSIVE REWARD</span>
+                <span class="promo-value" style="font-weight: 800; font-size: 0.95rem; color: #ffbd59; text-shadow: 0 0 8px rgba(255, 189, 89, 0.4);">Secure a Top 10 Spot to Win the Mystery Blind Box!</span>
+            </div>
+        </header>
+
+        <!-- LEADERBOARD DISPLAY -->
+        <section class="billboard-grid">
+            
+            <!-- TOP ROW: HALL OF FAME TITLE & QR CODE -->
+            <div class="billboard-top-row">
+                
+                <!-- CONTAINER 1: VENUE HALL OF FAME -->
+                <div class="panel glass-panel" style="flex-grow: 1; padding: 1rem; display: flex; flex-direction: column; justify-content: center; align-self: flex-end;">
+                    <h2 class="panel-title" style="font-size: 1.4rem; margin-bottom: 0.15rem; text-align: left;">🏆 Venue Hall of Fame</h2>
+                    <p class="panel-desc" style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.6rem; text-align: left;">Top scores synced across all kiosks.</p>
+                    <!-- Autoplay policy audio permission button -->
+                    <button id="billboard-audio-init" class="btn-sec" style="font-size: 0.65rem; padding: 3px 8px; align-self: flex-start;">🎵 Enable Sound</button>
+                </div>
+
+                <!-- CONTAINER 2: DEDICATED QR PANEL -->
+                <div class="panel glass-panel qr-enrollment-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem; padding: 1rem; text-align: center; flex-shrink: 0; width: 200px;">
+                    <div class="qr-box" style="width: 140px; height: 140px; background: white; padding: 6px; border-radius: 6px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(0, 242, 254, 0.2), 0 0 10px rgba(255, 255, 255, 0.1); margin: 0 auto;">
+                        <img id="qr-image" alt="Scan to Play" style="width: 100%; height: 100%; border: none; object-fit: contain;" />
+                    </div>
+                    <div class="qr-text-section">
+                        <span class="qr-label" style="font-weight: 900; font-size: 1.05rem; color: var(--neon-cyan); letter-spacing: 0.1em; display: block; margin-bottom: 4px;">SCAN TO PLAY</span>
+                        <span class="qr-sub-label" style="font-size: 0.65rem; color: var(--text-muted); display: block;">Join Venue Kiosk Node</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTAINER 3: LEADERBOARD LIST -->
+            <div class="panel glass-panel billboard-panel">
+                <ul class="leaderboard-list billboard-leaderboard-list" id="leaderboard-list">
+                    <li class="empty-list-msg">Waiting for database sync...</li>
+                </ul>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Client script for billboard sync -->
+    <script src="billboard.js"></script>
+</body>
+</html>
